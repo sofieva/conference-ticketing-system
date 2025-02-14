@@ -40,15 +40,15 @@ const Event = () => {
 
   return (
     <div className="main">
-      <div className="card">
-        <div className="progress-container">
+      <div className="card ">
+        <div className="progress-container container-fluid ">
           <div className="progress-header">
             <h2>
               {step === 1
                 ? "Ticket Selection"
                 : step === 2
-                ? "Attendee Details"
-                : "Confirmation"}
+                  ? "Attendee Details"
+                  : "Ready"}
             </h2>
             <span>Step {step}/3</span>
           </div>
@@ -60,12 +60,12 @@ const Event = () => {
           </div>
         </div>
 
-        <div className="card-body">
+        <div className="card-body col-sm-4 col-md-6">
           {step === 1 && (
             <>
               <div className="event-info">
                 <h2>Techember Fest '25</h2>
-                <p>Join us for an unforgettable experience! Secure your spot now.</p>
+                <p>Join us for an unforgettable experience at <br />Techember Fest ”25! Secure your spot now.</p>
                 <p>📍 04 Rumens road, Ikoyi, Lagos | March 15, 2025 | 7:00 PM</p>
               </div>
               <div className="divider"></div>
@@ -119,27 +119,31 @@ const Event = () => {
           {step === 2 && (
             <>
               <div className="attendee-form">
-                <div className="innerContainer">
+                <div className="innerForm">
                   <h2>Upload Profile Photo</h2>
-                  <div
-                    className={`upload-area ${dragOver ? "drag-over" : ""}`}
-                    onDragOver={(e) => {
-                      e.preventDefault();
-                      setDragOver(true);
-                    }}
-                    onDragLeave={() => setDragOver(false)}
-                    onDrop={(e) => {
-                      e.preventDefault();
-                      setDragOver(false);
-                      handleImageUpload(e.dataTransfer.files[0]);
-                    }}
-                    onClick={() => document.getElementById("imageUpload").click()}
-                  >
-                    {userData.image ? (
-                      <img src={userData.image} alt="Uploaded" className="uploaded-image img-fluid" />
-                    ) : (
-                      <p>📤 Drag & drop or click to upload</p>
-                    )}
+
+                  <div className="upload-container">
+
+                    <div
+                      className={`upload-area ${dragOver ? "drag-over" : ""}`}
+                      onDragOver={(e) => {
+                        e.preventDefault();
+                        setDragOver(true);
+                      }}
+                      onDragLeave={() => setDragOver(false)}
+                      onDrop={(e) => {
+                        e.preventDefault();
+                        setDragOver(false);
+                        handleImageUpload(e.dataTransfer.files[0]);
+                      }}
+                      onClick={() => document.getElementById("imageUpload").click()}
+                    >
+                      {userData.image ? (
+                        <img src={userData.image} alt="Uploaded" className="uploaded-image img-fluid" />
+                      ) : (
+                        <p>📤 Drag & drop or click to upload</p>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <input
@@ -191,28 +195,30 @@ const Event = () => {
             </>
           )}
 
-{step === 3 && (
+          {step === 3 && (
             <div className="container-fluid d-flex ms-auto justify-content-center ticket-container">
+             
               <h2 className="confirmation-title">Your Ticket is Booked!</h2>
               <p className="confirmation-text">
                 Check your email for a copy or <span className="highlight">download</span> your ticket.
               </p>
 
               <div className="ready-ticket">
-              <div className="innerTicketContainer border-green ">
+            
+                <div className="innerTicketContainer border-green ">
 
-                <h3 className="event-title">Techember Fest '25</h3>
-                <p className="event-location">📍 04 Rumens road, Ikoyi, Lagos</p>
-                <p className="event-time">📅 March 15, 2025 | 7:00 PM</p>
+                  <h3 className="event-title">Techember Fest '25</h3>
+                  <p className="event-location">📍 04 Rumens road, Ikoyi, Lagos</p>
+                  <p className="event-time">📅 March 15, 2025 | 7:00 PM</p>
 
-                <div className="ticket-body">
-                  {userData.image ? (
-                    <img src={userData.image} alt="User Avatar" className="avatar" />
-                  ) : (
-                    <img src="/path-to-avatar.png" alt="User Avatar" className="avatar img-fluid" />
-                  )}
-                  <div className="attendee-details">
-                  <table className="table-responsive">
+                  <div className="ticket-body">
+                    {userData.image ? (
+                      <img src={userData.image} alt="User Avatar" className="avatar img-fluid" />
+                    ) : (
+                      <img src="/path-to-avatar.png" alt="User Avatar" className="avatar img-fluid" />
+                    )}
+                    <div className="attendee-details">
+                      <table className="table-responsive">
                         <tbody>
                           <tr><td><strong>Enter your name:</strong></td><td>{userData.name || "N/A"}</td></tr>
                           <tr><td><strong>Enter your email:</strong></td><td>{userData.email || "N/A"}</td></tr>
@@ -221,13 +227,13 @@ const Event = () => {
                           <tr><td><strong>Special Requests:</strong></td><td>{userData.notes || "None"}</td></tr>
                         </tbody>
                       </table>
+                    </div>
+                  </div>
+
+                  <div className="barcode">
+                    <img src="./code.png" alt="Barcode" className="barcode-img" />
                   </div>
                 </div>
-
-                <div className="barcode">
-                  <img src="./code.png" alt="Barcode" className="barcode-img" />
-                </div>
-              </div>
               </div>
 
               <div className="button-group d-flex justify-content-between mt-3">

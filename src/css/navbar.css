@@ -1,82 +1,76 @@
 /* NAVBAR STYLES */
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 8px 30px;
-    background-color: #072023;
-    border-radius: 20px;
-    border: 2px solid #0d454f;
-    position: relative;
-  }
-  
-  /* Logo */
-  .logo-link {
-    font-size: 10px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Centered Navigation */
-  .centerNav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .centerNav ul {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav-link {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    font-size: 15px;
-  }
-  
-  .nav-link:a {
-    color: #2899ad !important;
-   
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding: 8px 30px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 2px solid #0d454f;
+  position: fixed;
+  z-index: 1000;
+}
 
+/* Logo */
+.logo-link {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
 
-  .nav-link:hover {
-    color: white;
-  }
-  
-  /* MY TICKETS button */
-  .tickets {
-    background-color: white;
-    border-radius: 20px;
-    text-align: center;
-    padding: 8px 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .ticket-button {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: small;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .arrow {
-    font-size: 18px;
-  }
-  
+/* Centered Navigation */
+.centerNav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
+.centerNav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
 
+.nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 15px;
+}
 
+.nav-link:a {
+  color: #2899ad !important;
+}
 
+.nav-link:hover {
+  color: white;
+}
 
+/* MY TICKETS button */
+.tickets {
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 8px 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-button {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.arrow {
+  font-size: 18px;
+}
