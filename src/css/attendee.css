@@ -1,0 +1,112 @@
+/* General styles */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0a1a1f; /* Dark background */
+  }
+  
+  .card {
+    background: #0f2a32;
+    border-radius: 12px;
+    padding: 20px;
+    width: 450px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-body {
+    padding: 20px 0;
+  }
+  
+  /* Upload Box */
+  .upload-box {
+    border: 2px dashed #0ff;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    color: #0ff;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .upload-box:hover {
+    background: rgba(0, 255, 255, 0.1);
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    color: #a9c4c9;
+    margin-bottom: 5px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #0ff;
+    background: #0f2a32;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: #0ff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  
+  /* Buttons */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  button {
+    width: 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+  }
+  
+  .cancel-button {
+    background: transparent;
+    color: #0ff;
+    border: 1px solid #0ff;
+  }
+  
+  .cancel-button:hover {
+    background: rgba(0, 255, 255, 0.1);
+  }
+  
+  .next-button {
+    background: #0ff;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .next-button:hover {
+    background: #00d1d1;
+  }
+  

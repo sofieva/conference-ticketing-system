@@ -1,0 +1,130 @@
+.ticket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #071b24;
+    color: white;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .ticket-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .ticket-subtitle {
+    color: #a1b1c1;
+    margin-bottom: 20px;
+  }
+  
+  .download-text {
+    color: #22b8cf;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .ticket-card {
+    background: #0a1c26;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    border: 1px solid #1c3d4b;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .event-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .event-details {
+    color: #a1b1c1;
+    font-size: 14px;
+  }
+  
+  .profile-photo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+  
+  .ticket-info {
+    background: #112029;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #1c3d4b;
+  }
+  
+  .info-row:last-child {
+    border-bottom: none;
+  }
+  
+  .label {
+    color: #a1b1c1;
+    font-size: 12px;
+  }
+  
+  .value {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .special-request .value {
+    font-size: 12px;
+    font-style: italic;
+    color: #a1b1c1;
+  }
+  
+  .barcode {
+    background: #071b24;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+  }
+  
+  .barcode p {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .btn-outline,
+  .btn-primary {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .btn-outline {
+    background: transparent;
+    border: 1px solid #1c3d4b;
+    color: #a1b1c1;
+  }
+  
+  .btn-primary {
+    background: #22b8cf;
+    border: none;
+    color: white;
+    font-weight: bold;
+  }
